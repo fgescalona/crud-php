@@ -29,6 +29,13 @@
             require_once 'vistas/editar.php';
         }
 
+        public function eliminar($id)
+        {
+            $eliminar = $this->modelo->eliminar($id);
+
+            $this->listar();
+        }
+
         public function agregar()
         {
 

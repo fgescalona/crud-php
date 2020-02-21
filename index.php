@@ -1,6 +1,8 @@
 <?php
 
     require_once 'controladores/EmpleadosCtr.class.php';
+
+    $accion = '';
     $controlador = new EmpleadosCtr();
     
     if ($_REQUEST)
@@ -17,7 +19,8 @@
             break;
 
         case 'eliminar':
-            $controlador->editar($_POST);
+            $id = $_REQUEST['id'];
+            $controlador->eliminar($id);
             break;
         
         default:

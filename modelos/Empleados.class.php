@@ -25,6 +25,17 @@
             return $respuesta;
         }
 
+        public function eliminar($id)
+        {
+
+            $sql = "DELETE FROM empleados WHERE id = $id";
+
+            $query = $this->db->prepare($sql);
+            $respuesta = $query->execute();
+
+            return $respuesta;
+        }
+
         public function obtenerUsuarios()
         {
 

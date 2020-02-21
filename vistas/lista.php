@@ -38,7 +38,7 @@
                         <a href="index.php?accion=editar&id=<?php echo $usuarios[$llave]['id'] ?>" class="btn btn-primary">Editar</a>
                     </td>
                     <td>
-                        <button name="accion" value="eliminar" class="btn btn-danger">Eliminar</button>
+                        <a href="index.php?accion=eliminar&id=<?php echo $usuarios[$llave]['id'] ?>" class="btn btn-danger">Eliminar</a>
                     </td>
                 </tr>
             <?php
