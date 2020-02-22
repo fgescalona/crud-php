@@ -55,4 +55,21 @@
 
             return $usuario;
         }
+
+        public function actualizar($datosUsuario)
+        {
+            
+            $sql = "UPDATE
+                        empleados
+                    SET
+                        nombre = '". $datosUsuario['nombre'] ."',
+                        apellido = '". $datosUsuario['apellido']."',
+                        correo = '". $datosUsuario['correo'] ."',
+                        foto = '". $datosUsuario['foto'] ."'
+                    WHERE
+                        id = '". $datosUsuario['id'] ."'";
+            
+            $query = $this->db->prepare($sql);
+            $respuesta = $query->execute();
+        }
     }

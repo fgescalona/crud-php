@@ -28,6 +28,14 @@
 
             require_once 'vistas/editar.php';
         }
+        
+        public function actualizar($datosUsuario)
+        {
+
+            $this->modelo->actualizar($datosUsuario);
+            $this->listar();
+
+        }
 
         public function eliminar($id)
         {

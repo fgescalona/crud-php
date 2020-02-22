@@ -6,7 +6,7 @@
         
 ?>
 
-<form action="../index.php" method="put" ectype="multipart/form-data">
+<form action="#" method="post" ectype="multipart/form-data">
 
     <div class="form-group">
         <label for="nombre">Nombre</label>
@@ -27,7 +27,9 @@
         <input type="text" class="form-control" id="foto" name="foto" value="<?php echo $usuario['foto']; ?>">
     </div>
 
-    <button name="accion" value="agregar" type="submit" class="btn btn-success">Guardar</button>
+    <input type="hidden" id="id" name="id" value="<?php echo $usuario['id']; ?>">
+
+    <button name="accion" value="actualizar" type="submit" class="btn btn-success">Actualizar</button>
 
 </form>
 

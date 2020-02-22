@@ -18,6 +18,11 @@
             $controlador->editar($id);
             break;
 
+        case 'actualizar':
+            $datosUsuario = $_REQUEST;
+            $controlador->actualizar($datosUsuario);
+            break;
+
         case 'eliminar':
             $id = $_REQUEST['id'];
             $controlador->eliminar($id);
